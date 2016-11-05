@@ -1,0 +1,5 @@
+.cask/
+.cache
+.ropeproject
+.coverage
+
