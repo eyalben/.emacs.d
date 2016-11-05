@@ -20,7 +20,7 @@
     ("98cc377af705c0f2133bb6d340bf0becd08944a588804ee655809da5d8140de6" default)))
  '(package-selected-packages
    (quote
-    (better-shell material-theme better-defaults magit elpy exec-path-from-shell zenburn-theme lua-mode pallet))))
+    (markdown-mode better-shell material-theme better-defaults magit elpy exec-path-from-shell zenburn-theme lua-mode pallet))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

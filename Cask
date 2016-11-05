@@ -8,6 +8,7 @@
 (depends-on "exec-path-from-shell")
 (depends-on "lua-mode")
 (depends-on "magit")
+(depends-on "markdown-mode")
 (depends-on "material-theme")
 (depends-on "pallet")
 (depends-on "zenburn-theme")
