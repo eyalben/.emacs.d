@@ -1,0 +1,13 @@
+(source gnu)
+(source melpa)
+(source melpa-stable)
+
+(depends-on "better-defaults")
+(depends-on "better-shell")
+(depends-on "elpy")
+(depends-on "exec-path-from-shell")
+(depends-on "lua-mode")
+(depends-on "magit")
+(depends-on "material-theme")
+(depends-on "pallet")
+(depends-on "zenburn-theme")
