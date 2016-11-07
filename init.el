@@ -1,10 +1,8 @@
-
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 (package-initialize)
-
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
 
@@ -55,7 +53,29 @@
 
 
 (elpy-enable)
+(eval-after-load "elpy"
+  '(cl-dolist (key '("M-<up>" "M-<down>" "M-<left>" "M-<right>"))
+     (define-key elpy-mode-map (kbd key) nil)))
 
-;; Keyboard Bindings
-(global-set-key [(control tab)] 'other-window)
-(global-set-key (kbd "C-`") 'eshell)
+
+;; Disable word-wrap
+(setq-default truncate-lines 1)
+(delete-selection-mode 1)
+
+
+(defconst user-init-dir
+  (cond ((boundp 'user-emacs-directory)
+          user-emacs-directory)
+        ((boundp 'user-init-directory)
+         user-init-directory)
+        (t "~/.emacs.d/")))
+
+(defun load-user-file (file)
+  (interactive "f")
+  "Load a file in current user's configuration directory"
+  (load-file (expand-file-name file user-init-dir)))
+
+(load-user-file "keys.el")
+
+;; Load keys the last, in order to override bad key bindings
+(require 'keys)
