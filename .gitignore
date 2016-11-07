@@ -2,4 +2,6 @@
 .cache
 .ropeproject
 .coverage
+ido.last
+eshell/
 
