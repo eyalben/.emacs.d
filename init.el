@@ -60,6 +60,7 @@
 
 ;; Disable word-wrap
 (setq-default truncate-lines 1)
+(setq x-select-enable-primary nil)
 (delete-selection-mode 1)
 
 
@@ -79,3 +80,20 @@
 
 ;; Load keys the last, in order to override bad key bindings
 (require 'keys)
+
+(defalias 'yes-or-no-p 'y-or-n-p)
+(setq-default tab-width 4)
+;; use space to indent by default
+(setq-default indent-tabs-mode nil)
+
+(require 'cc-mode)
+(require 'semantic)
+(global-semanticdb-minor-mode 1)
+(global-semantic-idle-scheduler-mode 1)
+(semantic-add-system-include "/usr/include/boost" 'c++-mode)
+(semantic-add-system-include "~/linux/kernel")
+(semantic-add-system-include "~/linux/include")
+
+(semantic-mode 1)
+
+
