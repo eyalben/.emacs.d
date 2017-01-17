@@ -83,8 +83,10 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 (setq-default tab-width 4)
+(setq-default c-basic-offset 4)
 ;; use space to indent by default
 (setq-default indent-tabs-mode nil)
+
 
 (require 'cc-mode)
 (require 'semantic)
@@ -96,4 +98,6 @@
 
 (semantic-mode 1)
 
-
+(load-user-file "fshell.el")
+(load-user-file "newshell.el")
+(require 'newshell)
