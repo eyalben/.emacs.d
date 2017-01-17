@@ -13,3 +13,5 @@
      (set-window-buffer w2 w1b)))
 
 (global-set-key [(control f6)] 'transpose-windows)
+
+(provide 'transpose)

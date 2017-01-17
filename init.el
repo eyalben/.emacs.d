@@ -101,3 +101,6 @@
 (load-user-file "fshell.el")
 (load-user-file "newshell.el")
 (require 'newshell)
+
+(load-user-file "transpose.el")
+(require 'transpose)
